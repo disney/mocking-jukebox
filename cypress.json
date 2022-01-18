@@ -1,0 +1,12 @@
+{
+  "baseUrl": "http://localhost:4000",
+  "viewportHeight": 900,
+  "viewportWidth": 1440,
+  "fixturesFolder": "test/fixtures",
+  "integrationFolder": "test/integration",
+  "pluginsFile": "test/plugins/index.ts",
+  "screenshotsFolder": "test/screenshots",
+  "supportFile": "test/support/index.ts",
+  "videosFolder": "test/videos",
+  "nodeVersion": "system"
+}

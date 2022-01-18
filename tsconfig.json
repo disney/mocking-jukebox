@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "baseUrl": "http://localhost:4000",
+    "incremental": true,
+    "target": "ES2020",
+    "rootDirs": [
+      "src",
+      "test"
+    ],
+    "outDir": "dist",
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
+    "moduleResolution": "node",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": [
+    "src/**/*"
+  ]
+}

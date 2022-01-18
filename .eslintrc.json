@@ -1,0 +1,52 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "ignorePatterns": [
+    "dist/",
+    "mock-recordings/",
+    "node_modules/"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "src/client/**/*.ts",
+        "test/fixtures/client.js"
+      ],
+      "env": {
+        "browser": true
+      }
+    },
+    {
+      "files": [
+        "build.js",
+        "src/server/**/*.ts",
+        "test/fixtures/server.js",
+        "test/**/*.ts"
+      ],
+      "env": {
+        "node": true
+      }
+    },
+    {
+      "files": [
+        "src/server/**/*.ts"
+      ],
+      "env": {
+        "shared-node-browser": true
+      }
+    }
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "indent": ["error", "tab"]
+  }
+}
