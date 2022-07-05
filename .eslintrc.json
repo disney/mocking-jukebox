@@ -11,6 +11,7 @@
   "overrides": [
     {
       "files": [
+        "comparisons/**/*.js",
         "src/client/**/*.ts",
         "test/fixtures/client.js"
       ],

@@ -1,0 +1,20 @@
+{
+  "name": "polly-comparison",
+  "version": "0.0.0",
+  "description": "A version of ../test/fixtures using Polly.js, to compare against Mocking Jukebox",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon --inspect --no-warnings --watch . server.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@pollyjs/adapter-fetch": "^6.0.5",
+    "@pollyjs/core": "^6.0.5",
+    "@pollyjs/node-server": "^6.0.1",
+    "@pollyjs/persister-rest": "^6.0.5",
+    "nodemon": "^2.0.18"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

@@ -173,3 +173,9 @@ The options passed to `play` or `record` need at least `album` and `routes` prop
 - Mocks are only saved when the current working folder contains a folder named `.git`, as in, this is a project checked out via Git. This is to prevent Mocking Jukebox from being usable in recording mode in production. Mocking Jukebox will also not record if `NODE_ENV` is `'production'`.
 
 - Even if `transformRequest` isn’t used, the headers `authorization` and `cookie` are always removed before a mock is saved to disk. This is to prevent authentication tokens from being accidentally saved and committed into source control.
+
+## Similar Projects
+
+- Mocking Jukebox builds on [Mock Service Worker](https://mswjs.io) to handle the network request interception. If you don’t need the recording and playback functionality that Mocking Jukebox adds, Mock Service Worker can be used on its own for handwritten mock responses to network calls.
+
+- [Polly.js](https://netflix.github.io/pollyjs) is a similar library to Mocking Jukebox, also offering recording and playback functionality, though with a focus on testing. It also uses a different method for intercepting network calls that doesn’t involve a service worker and therefore doesn’t show the intercepted network requests in the Developer Tools Network tab. Unlike Mocking Jukebox, it has modes that run without needing a server (saving mocks in `localStorage`) and can mock Node.js server-to-server network requests (using [Nock](https://github.com/nock/nock)). Two versions of the same project using prerecorded mocks via Mocking Jukebox and via Polly.js are provided in this repo, under `test/fixtures` (Mocking Jukebox) and `comparisons/polly` (Polly.js).
